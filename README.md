@@ -1,5 +1,5 @@
 # TFG
 
-Welcome to the best cybersecurity tool for audit what´s happening in the system!
+Welcome to the ultimate cybersecurity tool for monitoring and auditing system activity!
 
-By Federico López Merino, Manuel Louro Meneses, Pablo Sevillano Ruiz.
+By Federico López Merino, Manuel Louro Meneses, pablo Sevillano Ruiz.
