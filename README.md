@@ -1,6 +1,6 @@
 # TFG
 
-![Logo del proyecto](/Que-es-Ciberseguridad.webp)
+![Logo del proyecto](/img/prueba)
 
 Welcome to the ultimate cybersecurity tool for monitoring and auditing system activity!
 
