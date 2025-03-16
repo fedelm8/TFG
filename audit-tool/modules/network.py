@@ -11,9 +11,10 @@ def check_ipv6_configuration():
 def check_dns_servers():
     """Verifica los servidores DNS configurados."""
     try:
-        dns_servers = subprocess.getoutput("cat /etc/resolv.conf")
+        # Extract only the nameservers from /etc/resolv.conf
+        dns_servers = subprocess.getoutput("grep -i 'nameserver' /etc/resolv.conf")
         if dns_servers:
-            return "OK", dns_servers
+            return "OK", dns_servers.strip()
         else:
             return "Not Found", None
     except Exception as e:

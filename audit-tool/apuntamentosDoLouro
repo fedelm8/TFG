@@ -1,0 +1,3 @@
+sudo apt install chkrootkit clamav
+
+Eso para el modulo malware_protection

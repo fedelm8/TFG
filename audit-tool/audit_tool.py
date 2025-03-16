@@ -50,18 +50,58 @@ def run_selected_modules():
     print("[INFO] Ejecutando módulo: Network...\n")
     results["network"] = importlib.import_module("modules.network").run()
 
-    # 7 Ejecutar auditoría de File Permissions
+    # 8 Ejecutar auditoría de File Permissions
     print("[INFO] Ejecutando módulo: File Permissions...\n")
     results["file_permissions"] = importlib.import_module("modules.file_permissions").run()
 
-    # 7 Ejecutar auditoría de home directories
+    # 9 Ejecutar auditoría de home directories
     print("[INFO] Ejecutando módulo: home directories...\n")
     results["home_directories"] = importlib.import_module("modules.home_directories").run()
 
+    # 10 Ejecutar auditoría de logs
+    print("[INFO] Ejecutando módulo: Auditing Logs...\n")
+    results["logs"] = importlib.import_module("modules.logs").run()
 
-    # 3️⃣ Aquí puedes agregar más módulos en el orden que quieras
-    # print("[INFO] Ejecutando módulo: network...\n")
-    # results["network"] = importlib.import_module("modules.network").run()
+    # 11 Ejecutar auditoría de seguridad de aplicaciones
+    print("[INFO] Ejecutando módulo: Auditing Security App...\n")
+    results["app_security"] = importlib.import_module("modules.app_security").run()
+
+    # 12 Ejecutar auditoría avanzada de red
+    print("[INFO] Ejecutando módulo: Advanced Network Auditing ...\n")
+    results["advanced_network_security"] = importlib.import_module("modules.advanced_network_security").run()
+
+    # 13 Ejecutar auditoría de cuentas de servicio
+    print("[INFO] Ejecutando módulo: Account Service Auditing ...\n")
+    results["service_accounts"] = importlib.import_module("modules.service_accounts").run()
+
+    # 14 Ejecutar auditoría de seguridad de Contenedores
+    print("[INFO] Ejecutando módulo: Containers Security Auditing ...\n")
+    results["containers_security"] = importlib.import_module("modules.containers_security").run()
+
+    # 15 Ejecutar auditoría de actualizaciones
+    print("[INFO] Ejecutando módulo: Updates Auditing ...\n")
+    results["updates"] = importlib.import_module("modules.updates").run()
+
+    # 16 Ejecutar auditoría de politicas de seguridad
+    print("[INFO] Ejecutando módulo: Security Policies Auditing ...\n")
+    results["security_policies"] = importlib.import_module("modules.security_policies").run()
+
+    # 17 Ejecutar auditoría de privilegios elevados
+    print("[INFO] Ejecutando módulo: Sudo Auditing ...\n")
+    results["sudo"] = importlib.import_module("modules.sudo").run()
+
+    # 18 Ejecutar auditoría de seguridad de dispositivos de almacenamiento
+    print("[INFO] Ejecutando módulo: Storage Device Auditing ...\n")
+    results["storage_device"] = importlib.import_module("modules.storage_device").run()
+
+    # 19 Ejecutar auditoría de proteccion de malware
+    print("[INFO] Ejecutando módulo: Malware Protection Auditing ...\n")
+    results["malware_protection"] = importlib.import_module("modules.malware_protection").run()
+
+    # 20 Ejecutar auditoría de copias de seguridad
+    print("[INFO] Ejecutando módulo: Backup Auditing ...\n")
+    results["backup"] = importlib.import_module("modules.backup").run()
+
 
     return results
 
