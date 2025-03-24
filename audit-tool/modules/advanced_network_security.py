@@ -1,4 +1,5 @@
 import subprocess
+import json
 
 def check_iptables_rules():
     """Verifica las reglas de iptables y si permiten tráfico no deseado."""
@@ -52,7 +53,6 @@ def check_ipsec_usage():
 
 def run():
     """Ejecuta todas las auditorías de seguridad de red y devuelve los resultados."""
-    print("\n---------------------------------------------------")
     print("[Advanced Network Security] Iniciando auditoría de seguridad de red avanzada...")
 
     iptables_result = check_iptables_rules()

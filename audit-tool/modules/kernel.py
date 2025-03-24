@@ -132,7 +132,6 @@ def check_reboot_needed():
 
 def run():
     """Ejecuta todas las auditorías del kernel y devuelve los resultados."""
-    print("\n---------------------------------------------------")
     print("[Kernel Audit] Iniciando auditoría del kernel...")
 
     kernel_version = get_kernel_version()

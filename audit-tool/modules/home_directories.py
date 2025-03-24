@@ -1,6 +1,7 @@
 import os
 import stat
 import pwd
+import json
 
 def check_home_directory_permissions():
     """Verifica los permisos de los directorios de inicio de los usuarios."""
@@ -70,7 +71,6 @@ def check_shell_history_files():
 
 def run():
     """Ejecuta todas las auditorías de directorios de inicio y devuelve los resultados."""
-    print("\n---------------------------------------------------")
     print("[Home Directories] Iniciando auditoría de directorios de inicio...")
 
     home_permissions = check_home_directory_permissions()

@@ -1,4 +1,5 @@
 import subprocess
+import json
 
 def check_disk_encryption():
     """Verifica si el cifrado de discos (LUKS) está habilitado en los discos críticos."""
@@ -56,7 +57,6 @@ def check_filesystem_integrity():
 
 def run():
     """Ejecuta todas las auditorías de dispositivos de almacenamiento y devuelve los resultados."""
-    print("\n---------------------------------------------------")
     print("[Storage Device Security] Starting storage device audit...")
 
     disk_encryption = check_disk_encryption()

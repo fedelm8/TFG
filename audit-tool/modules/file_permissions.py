@@ -36,7 +36,6 @@ def check_directory_permissions(directory_path):
 
 def run():
     """Ejecuta todas las comprobaciones de permisos de archivos y directorios."""
-    print("\n---------------------------------------------------")
     print("[File Permissions] Iniciando comprobación de permisos de archivos y directorios...")
 
     # Lista de archivos importantes

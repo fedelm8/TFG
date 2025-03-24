@@ -1,5 +1,6 @@
 import subprocess
 import os
+import json
 
 def check_pending_updates():
     """Verifica si hay actualizaciones críticas pendientes."""
@@ -54,7 +55,6 @@ def check_automatic_updates():
 
 def run():
     """Ejecuta todas las auditorías de actualizaciones del sistema y devuelve los resultados."""
-    print("\n---------------------------------------------------")
     print("[System Updates] Iniciando auditoría de actualizaciones del sistema...")
 
     pending_updates = check_pending_updates()

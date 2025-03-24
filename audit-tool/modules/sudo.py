@@ -1,4 +1,5 @@
 import subprocess
+import json
 
 def check_sudo_access():
     """Checks sudo usage to ensure users have only necessary access."""
@@ -48,25 +49,57 @@ def check_sudoers_inclusions():
     except Exception as e:
         return f"Error checking inclusions in sudoers: {str(e)}"
 
+def check_sudoers_with_guid_bit():
+    """Checks for files with the setgid bit in the sudoers directory or related files."""
+    try:
+        # Find files with setgid bit in the /etc/sudoers directory or related sudo files
+        sudoers_with_guid = subprocess.getoutput("find /etc/sudoers* -type f -exec ls -l {} + 2>/dev/null | grep 's' ")
+        if sudoers_with_guid:
+            return f"Files with setgid bit (GUID) found in sudoers: \n{sudoers_with_guid}"
+        else:
+            return "No files with the setgid (GUID) bit found in sudoers files."
+    except Exception as e:
+        return f"Error checking for GUID bit in sudoers files: {str(e)}"
+
+def check_files_with_suid_or_guid():
+    """
+    Busca archivos con bits setuid (SUID) o setgid (GUID) en todo el sistema.
+    """
+    try:
+        result = subprocess.getoutput(
+            "find / -perm /6000 -type f -exec ls -l {} + 2>/dev/null"
+        )
+        if result:
+            return f"[ALERTA] Archivos con setuid o setgid encontrados en el sistema:\n{result}"
+        else:
+            return "[OK] No se encontraron archivos con setuid o setgid en el sistema."
+    except Exception as e:
+        return f"[ERROR] Error al buscar setuid/setgid: {str(e)}"
+
+
 def run():
     """Runs all elevated privilege audits and returns the results."""
-    print("\n---------------------------------------------------")
     print("[Sudo Privileges] Starting sudo privilege audit...")
 
     sudo_access = check_sudo_access()
     sudoers_file = check_sudoers_file()
     sudoers_inclusions = check_sudoers_inclusions()
+    sudoers_with_guid = check_sudoers_with_guid_bit()
+    system_files_with_suid_guid = check_files_with_suid_or_guid()
 
     print("\n---------------------------------------------------")
     print(f"- Sudo access: {sudo_access}")
     print(f"- Sudoers file configuration: {sudoers_file}")
     print(f"- Sudoers inclusions: {sudoers_inclusions}")
+    print(f"- Sudoers files with GUID bit: {sudoers_with_guid}")
+    print(f"- System files with setuid/setgid bits: {system_files_with_suid_guid}")
     print("---------------------------------------------------\n")
 
     return {
         "sudo_access": sudo_access,
         "sudoers_file": sudoers_file,
-        "sudoers_inclusions": sudoers_inclusions
+        "sudoers_inclusions": sudoers_inclusions,
+        "sudoers_with_guid": sudoers_with_guid
     }
 
 if __name__ == "__main__":

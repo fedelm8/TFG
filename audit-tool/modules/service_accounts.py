@@ -2,6 +2,7 @@ import subprocess
 import pwd
 import crypt
 import time
+import json
 
 def check_service_accounts_with_elevated_privileges():
     """Verifica si hay cuentas de servicio con privilegios elevados (sudo/root)."""
@@ -75,7 +76,6 @@ def check_inactive_service_accounts():
 
 def run():
     """Ejecuta todas las auditorías de las cuentas de servicio y devuelve los resultados."""
-    print("\n---------------------------------------------------")
     print("[Service Accounts] Iniciando auditoría de cuentas de servicio...")
 
     elevated_privileges = check_service_accounts_with_elevated_privileges()

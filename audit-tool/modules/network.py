@@ -1,4 +1,5 @@
 import subprocess
+import json
 
 def check_ipv6_configuration():
     """Verifica la configuración de IPv6."""
@@ -86,7 +87,6 @@ def check_uncommon_network_protocols():
 
 def run():
     """Ejecuta todas las auditorías de red y devuelve los resultados."""
-    print("\n---------------------------------------------------")
     print("[Networking] Iniciando auditoría de red...")
 
     ipv6_status = check_ipv6_configuration()

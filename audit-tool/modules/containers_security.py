@@ -1,4 +1,6 @@
 import subprocess
+import json
+
 
 def check_docker_container_configuration():
     """Verifica la configuración de los contenedores Docker."""
@@ -84,7 +86,6 @@ def check_container_vulnerabilities():
 
 def run():
     """Ejecuta todas las auditorías de seguridad en contenedores y devuelve los resultados."""
-    print("\n---------------------------------------------------")
     print("[Containers Security] Iniciando auditoría de seguridad en contenedores...")
 
     # Comprobación de configuración de contenedores Docker

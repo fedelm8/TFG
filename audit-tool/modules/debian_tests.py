@@ -1,4 +1,5 @@
 import subprocess
+import json
 
 def check_system_binaries():
     """Verifica si los binarios necesarios existen en los directorios especificados."""
@@ -61,7 +62,6 @@ def check_filesystem_checks():
 
 def run():
     """Ejecuta todas las pruebas relacionadas con Debian y devuelve los resultados."""
-    print("\n---------------------------------------------------")
     print("[Debian Tests] Iniciando prueba de Debian...")
 
     system_binaries = check_system_binaries()

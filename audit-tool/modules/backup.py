@@ -1,5 +1,7 @@
 import subprocess
 import os
+import json
+
 
 def check_backup_schedule():
     """Verifica si las copias de seguridad se realizan regularmente."""
@@ -60,7 +62,6 @@ def check_restore_process():
 
 def run():
     """Ejecuta todas las auditorías de copias de seguridad y devuelve los resultados."""
-    print("\n---------------------------------------------------")
     print("[Backup] Starting backup audit...")
 
     backup_schedule = check_backup_schedule()

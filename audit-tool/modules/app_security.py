@@ -1,4 +1,5 @@
 import subprocess
+import json
 
 def check_apache_security():
     """Verifica la configuración de seguridad de Apache."""
@@ -100,7 +101,6 @@ def check_ssl_configurations():
 
 def run():
     """Ejecuta todas las auditorías de seguridad de aplicaciones y devuelve los resultados."""
-    print("\n---------------------------------------------------")
     print("[Application Security] Iniciando auditoría de seguridad de aplicaciones...")
 
     apache_security = check_apache_security()

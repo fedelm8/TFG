@@ -1,5 +1,7 @@
 import subprocess
 import os
+import json
+
 
 def check_service_manager():
     """Verifica qué gestor de servicios está en uso."""
@@ -67,7 +69,6 @@ def run_systemd_analyze_security():
 
 def run():
     """Ejecuta todas las auditorías de arranque y servicios y devuelve los resultados."""
-    print("\n---------------------------------------------------")
     print("[Boot and Services] Iniciando auditoría de arranque y servicios...")
 
     service_manager = check_service_manager()

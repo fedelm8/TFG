@@ -1,4 +1,5 @@
 import subprocess
+import json
 
 def check_password_policy():
     """Verifica las políticas de contraseñas configuradas en el sistema."""
@@ -46,7 +47,6 @@ def check_audit_logs():
 
 def run():
     """Ejecuta todas las auditorías de políticas de seguridad y devuelve los resultados."""
-    print("\n---------------------------------------------------")
     print("[Security Policies] Iniciando auditoría de políticas de seguridad...")
 
     password_policy = check_password_policy()

@@ -1,3 +1,4 @@
 requests
 psutil
-subprocess
+pyfiglet
+colorama

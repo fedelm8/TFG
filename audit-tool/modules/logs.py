@@ -1,6 +1,7 @@
 import os
 import subprocess
 import time
+import json
 
 def check_log_file_exists(log_file):
     """Verifica si un archivo de log existe."""
@@ -54,7 +55,6 @@ def check_old_logs(log_file, days_threshold=30):
 
 def run():
     """Ejecuta todas las auditorías de los logs y devuelve los resultados."""
-    print("\n---------------------------------------------------")
     print("[Logs] Iniciando auditoría de logs...")
 
     log_files = ["/var/log/auth.log", "/var/log/syslog", "/var/log/messages", "/var/log/dmesg"]

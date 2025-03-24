@@ -1,5 +1,6 @@
 import subprocess
 import os
+import json
 
 def check_admin_accounts():
     """Verifica las cuentas de administrador."""
@@ -136,7 +137,6 @@ def check_single_user_mode_authentication():
 
 def run():
     """Ejecuta todas las auditorías de usuarios, grupos y autenticación."""
-    print("\n---------------------------------------------------")
     print("[Users, Groups and Authentication] Iniciando auditoría de usuarios, grupos y autenticación...")
 
     admin_accounts = check_admin_accounts()

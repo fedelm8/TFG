@@ -35,7 +35,6 @@ def check_prelink_tooling():
 
 def run():
     """Ejecuta todas las auditorías de memoria y procesos y devuelve los resultados."""
-    print("\n---------------------------------------------------")
     print("[Memory and Processes] Iniciando auditoría de memoria y procesos...")
 
     meminfo = check_meminfo()
