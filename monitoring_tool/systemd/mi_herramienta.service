@@ -1,0 +1,13 @@
+[Unit]
+Description=Monitor de accesos a archivos sensibles
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 /ruta/a/mi_herramienta/bin/monitor.py
+Restart=always
+User=root
+StandardOutput=syslog
+StandardError=syslog
+
+[Install]
+WantedBy=multi-user.target
