@@ -3,8 +3,8 @@
 
 *Comprehensive OS auditing in a modular and structured way.*
 
-![Last Commit](https://img.shields.io/github/last-commit/fedelm8/TFG)
-![Python](https://img.shields.io/badge/python-3%2B-blue)
+![Last Commit](https://img.shields.io/badge/last%20commit-today-brightgreen)
+![Python](https://img.shields.io/badge/python-100%25-blue)
 ![Platform](https://img.shields.io/badge/platform-Linux-orange)
 
 ---
@@ -20,7 +20,7 @@
 
 ## Overview
 
-**audit_tool** is a robust monitoring tool designed to safeguard sensitive files by detecting unauthorized access in real-time.
+**audit_tool** is a comprehensive and modular system auditing utility designed to analyze the security posture, configurations, and integrity of a Linux-based operating system. It helps system administrators, auditors, and cybersecurity professionals quickly identify potential vulnerabilities, misconfigurations, outdated packages, suspicious user activities, and more — all from one place.
 
 ### Why audit_tool?
 
