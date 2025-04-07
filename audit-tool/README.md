@@ -13,8 +13,8 @@
 ## Table of Contents
 
 - [Overview](#overview)
-- [Project Structure](#project-structure)
 - [Prerequisites](#prerequisites)
+- [Project Structure](#project-structure)
 - [Installation and Usage](#installation-and-usage)
 
 ---
@@ -32,6 +32,19 @@ This project enhances system security by providing continuous oversight of criti
 - 🛡️ **Threat Detection**: Integration with tools like `chkrootkit` and `clamav` for malware detection.
 - 📦 **Package and Kernel Checkups**: Verify updates, kernel integrity, and boot services.
 - 🔐 **User & Access Control Audits**: From sudoers to service accounts, everything's inspected.
+
+---
+
+
+## Prerequisites
+
+    -  Python 3.x  
+    - `requests`  
+    - `psutil`
+    - `pyfiglet` 
+    - `colorama`
+    - `pip`
+    - `git`
 
 ---
 
@@ -77,9 +90,6 @@ audit_tool/
 ---
 
 ---
-
-## Installation and Usage
-
 
 ##  Installation and Usage
 
