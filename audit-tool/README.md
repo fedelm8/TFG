@@ -34,16 +34,15 @@ This project enhances system security by providing continuous oversight of criti
 
 ---
 
-
 ## Prerequisites
 
-    -  Python 3.x  
-    - `requests`  
-    - `psutil`
-    - `pyfiglet` 
-    - `colorama`
-    - `pip`
-    - `git`
+- Python 3.x  
+- `requests`  
+- `psutil`
+- `pyfiglet`
+- `colorama`  
+- `pip`
+- `git`
 
 ---
 
