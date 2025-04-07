@@ -10,7 +10,33 @@
 
 ---
 
-## 📁 Project Structure
+## Table of Contents
+
+- [Overview](#overview)
+- [Project Structure](#project-structure)
+- [Prerequisites](#prerequisites)
+- [Installation and Usage](#installation-and-usage)
+
+---
+
+## Overview
+
+**audit_tool** is a robust monitoring tool designed to safeguard sensitive files by detecting unauthorized access in real-time.
+
+### Why audit_tool?
+
+This project enhances system security by providing continuous oversight of critical files. The core features include:
+
+- 🔍 **Full System Auditing**: Covers system info, network, security, file system, memory, containers and more.
+- 🧱 **Modular Architecture**: Easy to maintain and extend with separate scripts for each audit task.
+- 🛡️ **Threat Detection**: Integration with tools like `chkrootkit` and `clamav` for malware detection.
+- 📦 **Package and Kernel Checkups**: Verify updates, kernel integrity, and boot services.
+- 🔐 **User & Access Control Audits**: From sudoers to service accounts, everything's inspected.
+
+---
+
+
+## Project Structure
 
 ```
 audit_tool/
@@ -47,21 +73,17 @@ audit_tool/
         └── malware_protection.py
 ```
 
----
-
-## ✨ Features
-
-- 🔍 **Full System Auditing**: Covers system info, network, security, file system, memory, containers and more.
-- 🧱 **Modular Architecture**: Easy to maintain and extend with separate scripts for each audit task.
-- 🛡️ **Threat Detection**: Integration with tools like `chkrootkit` and `clamav` for malware detection.
-- 📦 **Package and Kernel Checkups**: Verify updates, kernel integrity, and boot services.
-- 🔐 **User & Access Control Audits**: From sudoers to service accounts, everything's inspected.
 
 ---
 
-## 🚀 Installation and Usage
+---
 
-### 🖥️ Set Up Virtual Machine
+## Installation and Usage
+
+
+##  Installation and Usage
+
+### 1. Set Up Virtual Machine
 
 1. Download Ubuntu 24.04 Noble Numbat for VirtualBox (OVA):  
    👉 https://www.osboxes.org/ubuntu/
@@ -76,7 +98,7 @@ audit_tool/
 
 ---
 
-### 📦 Install Dependencies
+### 2. Install Dependencies
 
 Open a terminal and run:
 
@@ -89,7 +111,7 @@ Restart the VM afterwards.
 
 ---
 
-### 📥 Clone the Repository
+### 3. Clone the Repository
 
 ```bash
 cd ~/Documents  # or any preferred directory
@@ -99,7 +121,7 @@ cd TFG  # Replace with the name of your repo if different
 
 ---
 
-### 🐍 Set Up Python Environment
+### 4. Set Up Python Environment
 
 ```bash
 sudo apt install python3-venv
@@ -110,7 +132,7 @@ pip install -r requirements.txt
 
 ---
 
-### 🔐 Install Extra Audit Tools
+### 5. Install Extra Audit Tools
 
 ```bash
 sudo apt install chkrootkit clamav
@@ -118,7 +140,7 @@ sudo apt install chkrootkit clamav
 
 ---
 
-### ▶️ Run the Tool
+### 6. Run the Tool
 
 ```bash
 sudo venv/bin/python audit_tool.py
