@@ -4,7 +4,7 @@
 *Comprehensive OS auditing in a modular and structured way.*
 
 ![Last Commit](https://img.shields.io/github/last-commit/fedelm8/TFG)
-![Python](https://img.shields.io/badge/python-3.x%2B-blue)
+![Python](https://img.shields.io/badge/python-3%2B-blue)
 ![Platform](https://img.shields.io/badge/platform-Linux-orange)
 
 ---
